@@ -21,3 +21,22 @@ function toggleTexto(link) {
   }
 
   setInterval(trocarSlide, 6000); // 6 segundos
+
+
+const horizontalSection = document.querySelector(".horizontal");
+    const scrollContent = document.querySelector(".scroll-content");
+
+    window.addEventListener("scroll", () => {
+      const sectionTop = horizontalSection.offsetTop;
+      const sectionHeight = horizontalSection.offsetHeight;
+      const scrollY = window.scrollY;
+      const windowHeight = window.innerHeight;
+
+      if (scrollY >= sectionTop && scrollY <= sectionTop + sectionHeight - windowHeight) {
+        const scrollDistance = scrollY - sectionTop;
+        const maxScroll = sectionHeight - windowHeight;
+        const percentage = scrollDistance / maxScroll;
+        const translateX = percentage * (scrollContent.scrollWidth - window.innerWidth);
+        scrollContent.style.transform = `translateX(-${translateX}px)`;
+      }
+    }); 

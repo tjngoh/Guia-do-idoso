@@ -15,7 +15,7 @@ h1 {
     text-align: center;
     margin-bottom: 30px;
     font-size: 1.8em;
-    color: #5A6650;
+    color: #4a5542;
     margin-top: 50px; 
 }
 
@@ -61,97 +61,67 @@ button:hover {
 /* essa é a parte da nav*/
 
 .btn {
-    font-size: 17px;
-    background: transparent;
-    border: none;
-    padding: 1em 1.0em;
-    color: #190636;
-    text-transform: uppercase;
-    position: relative;
-    transition: 0.2s ease;
-    cursor: pointer;
-  }
+  font-size: 17px;
+  background: transparent;
+  border: none;
+  padding: 1em 1.0em;
+  color: #190636;
+  text-transform: uppercase;
+  position: relative;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #5A6650;
+  transition: 0.5s ease;
+}
+
+.btn:hover {
+  color: #040504;
+  transition-delay: 0.5s;
+}
+
+.btn:hover::before {
+  width: 100%;
+
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  background-color: #e7decf;
+  transition: 0.3s ease;
+  z-index: -1;
+}
+
+.btn:hover::after {
+  height: 100%;
+  transition-delay: 0.4s;
+  color: rgb(81, 118, 148);
+}
+a.btn {
+  text-decoration: none;
   
-  .btn::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 2px;
-    width: 0;
-    background-color: #5A6650;
-    transition: 0.5s ease;
-  }
-  
-  .btn:hover {
-    color: #040504;
-    transition-delay: 0.5s;
-  }
-  
-  .btn:hover::before {
-    width: 100%;
-  
-  }
-  
-  .btn::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 0;
-    width: 100%;
-    background-color: #e7decf;
-    transition: 0.3s ease;
-    z-index: -1;
-  }
-  
-  .btn:hover::after {
-    height: 100%;
-    transition-delay: 0.4s;
-    color: rgb(81, 118, 148);
-  }
-  a.btn {
-    text-decoration: none;
-    
-  }
-  
-  nav {
-    background-color: #e7decf; /* cor suave */
+}
+  nav.green {
+    background-color: #b5d0c2; /* cor suave */
     margin-bottom: 16px;
     padding: 1em 2em;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* sombra leve */
     border-radius: 8px;
   }
  /* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html, body {
-  height: 100%;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #F8F6F1; /* Exemplo de fundo do body */
-}
-
-/* Footer */
-footer {
-  background-color: #A3C9A8; /* Cor de fundo */
-  color: #F8F6F1; /* Cor do texto */
-  text-align: center; /* Alinha o texto ao centro */
-  padding: 25px 0; /* Espaçamento em cima e embaixo */
-  width: 100%; /* Garante que o footer ocupe toda a largura da tela */
-  font-size: 14px; /* Tamanho da fonte */
-  margin-top: 299px; /* Evita que o rodapé fique muito colado aos cards */
-}
-
-footer p {
-  margin: 0; /* Remove margens do parágrafo */
-
-}
-
-
 
 .menu ul {
   list-style: none;
@@ -168,19 +138,12 @@ footer p {
   font-size: 18px;
 }
 
-.menu a:hover {
-  color: #79A3B1;
-}
 
 .logo img {
   max-width: 150px;
 }
 
-.cabeçalho {
-  font-size: 32px;
-  color: #79A3B1;
-  margin: 10px 0 0 10px;
-}
+
 
 main {
   padding: 40px 20px;
@@ -194,52 +157,50 @@ main h1 {
   margin-bottom: 30px;
 }
 
-.feedback-form {
-  max-width: 600px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
 
-.feedback-form input,
-.feedback-form textarea {
-  padding: 12px;
-  border: 1px solid #CCC;
-  border-radius: 5px;
-  font-size: 18px;
-  background-color: #F9F9F9;
-}
 
+/* toda a região da footer */
 
 footer {
-  background-color: #D0E8F2;
+  color: rgb(255, 255, 255);
+  background-color: #A3C9A8;
+  padding: 10px;
   text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-  border-top: 4px solid #79A3B1;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  align-items: center;
+  top: 3%;
 }
+
 
 .footer-copy {
-  margin: 10px 0;
-  font-size: 16px;
+  margin-bottom: 30px;
+  font-size: 30px;
 }
 
-.footer-menu {
-  list-style: none;
+.footer-nav .footer-menu {
+  list-style-type: none;
   padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
+  margin: 0;
 }
 
-.footer-link {
+.footer-nav .footer-item {
+  display: inline;
+  margin-right: 15px;
+
+}
+
+.footer-nav .footer-link {
+  color: #F8F6F1;
   text-decoration: none;
-  color: #333333;
-  font-weight: bold;
+  font-size: 20px;
+
 }
 
-.footer-link:hover {
-  color: #79A3B1;
+.footer-nav .footer-link:hover {
+  text-decoration: None;
+  border-radius: 10px;
+  color: #5A6650;
+  transition: 200ms;
 }
