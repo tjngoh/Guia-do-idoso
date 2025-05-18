@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bem-vindo ao Nosso Site</title>
+  <title>guia do idoso</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -27,14 +27,23 @@
           
       </ul>
   </nav>
-  <Main>
-    <h2 class="titulo-boasvindas">Olá, seja <br> bem vindo</h2>
-
-    <div class="bloco-texto">
-      <h3>
-        Criamos este espaço para oferecer informações úteis, de forma simples e acessível. Aqui você vai encontrar dicas, links e conteúdos que podem ajudar no seu dia a dia. Tudo pensado com carinho, respeitando o seu tempo, seu jeito e suas necessidades.
-      </h3>
+  <div class="container">
+    <div class="texto-lado-esquerdo">
+      <h2 class="titulo-boasvindas">Olá, seja <br> bem vindo</h2>
+      <div class="bloco-texto">
+        <h3>
+          Criamos este espaço para oferecer informações úteis, de forma simples e acessível. Aqui você vai encontrar dicas, links e conteúdos que podem ajudar no seu dia a dia. Tudo pensado com carinho, respeitando o seu tempo, seu jeito e suas necessidades.
+        </h3>
+      </div>
     </div>
+  
+    <div class="slider-imagens">
+      <img src="imagens/pexels-kampus-7983580.jpg" class="slide ativo" alt="Imagem 1">
+      <img src="imagens/pexels-marcus-aurelius-6787956.jpg" class="slide" alt="Imagem 2">
+      <img src="imagens/pexels-ruveyda-140435227-13661393.jpg" class="slide" alt="Imagem 3">
+    </div>
+  </div>
+  
     
     <div class="bloco-colorido">
     <div class="card-container">
@@ -78,36 +87,60 @@
 
 
 
-  <div class="card-creme">
+    <div class="card-creme">
 
-    <h2>Projetos e Espaços para Você</h2>
-    <p class="intro">Você sabia que Manaus tem espaços dedicados ao bem-estar da pessoa idosa? Aqui reunimos algumas dessas iniciativas. Clique para saber mais:</p>
-  
-    <div class="card-verde">
-      <h2>🏛️ Conselho Municipal do Idoso (CMI)</h2>
-      <p>Órgão que coordena ações para garantir os direitos da pessoa idosa em Manaus.</p>
-      <a class="vermais" href="#">Ver mais</a>
-    </div>
-  
-    <div class="card-verde">
-      <h2>🎭 Fundação Doutor Thomas – Cultura Ativa</h2>
-      <p>Atividades artísticas e culturais para promover bem-estar e socialização.</p>
-      <a class="vermais" href="#">Ver mais</a>
-    </div>
-  
-    <div class="card-verde">
-      <h2>🏠 Centro de Convivência da Família e do Idoso</h2>
-      <p>Espaço com aulas, oficinas e lazer no bairro São José 3, zona Leste.</p>
-      <a class="vermais" href="#">Ver mais</a>
-    </div>
-  
-    <div class="card-verde">
-      <h2>🌿 Projeto "Viver Bem na Terceira Idade"</h2>
-      <p>Oficinas, passeios e eventos culturais em várias zonas da cidade.</p>
-      <a class="vermais" href="#">Ver mais</a>
-    </div>
-  </div>
+      <h2>Projetos e Espaços para Você</h2>
+      <p class="intro">Você sabia que Manaus tem espaços dedicados ao bem-estar da pessoa idosa? Aqui reunimos algumas dessas iniciativas. Clique para saber mais:</p>
     
+      <div class="card-verde">
+        <h2>🏛️ Conselho Municipal do Idoso (CMI)</h2>
+        <p>Órgão que coordena ações para garantir os direitos da pessoa idosa em Manaus.</p>
+      
+        <div class="texto-oculto" style="display: none;">
+          <p>
+            O Conselho realiza reuniões mensais abertas ao público, onde são discutidas políticas públicas e direitos da pessoa idosa. Também promove eventos de conscientização, cursos de capacitação e articulação com instituições públicas e privadas voltadas ao envelhecimento digno.
+          </p>
+        </div>
+      
+        <a class="vermais" href="javascript:void(0);" onclick="toggleTexto(this)">Ver mais</a>
+      </div>
+      <div class="card-verde">
+        <h2>🎭 Fundação Doutor Thomas – Cultura Ativa</h2>
+        <p>Atividades artísticas e culturais para promover bem-estar e socialização.</p>
+      
+        <div class="texto-oculto" style="display: none;">
+          <p>
+            A Fundação oferece oficinas de teatro, música, dança, artesanato e outras atividades voltadas à inclusão social da pessoa idosa. O objetivo é fortalecer vínculos comunitários e estimular a expressão criativa.
+          </p>
+        </div>
+        <a class="vermais" href="javascript:void(0);" onclick="toggleTexto(this)">Ver mais</a>
+      </div>
+      
+      <div class="card-verde">
+        <h2>🏠 Centro de Convivência da Família e do Idoso</h2>
+        <p>Espaço com aulas, oficinas e lazer no bairro São José 3, zona Leste.</p>
+      
+        <div class="texto-oculto" style="display: none;">
+          <p>
+            Oferece uma programação variada que inclui aulas de informática, artes, ginástica, yoga e eventos culturais. É um ambiente seguro e acolhedor para promover o envelhecimento ativo.
+          </p>
+        </div>
+        <a class="vermais" href="javascript:void(0);" onclick="toggleTexto(this)">Ver mais</a>
+      </div>
+      
+      <div class="card-verde">
+        <h2>🌿 Projeto "Viver Bem na Terceira Idade"</h2>
+        <p>Oficinas, passeios e eventos culturais em várias zonas da cidade.</p>
+      
+        <div class="texto-oculto" style="display: none;">
+          <p>
+            Esse projeto itinerante leva atividades como palestras sobre saúde, dança, excursões e rodas de conversa a diferentes bairros de Manaus, promovendo integração e valorização da pessoa idosa.
+          </p>
+        </div>
+        <a class="vermais" href="javascript:void(0);" onclick="toggleTexto(this)">Ver mais</a>
+      </div>
+      <script src="script/script.js"></script>
+    </div>
   </Main>
   
 </body>
@@ -115,17 +148,13 @@
 <footer class="footer">
   <p class="footer-copy">Guia do Idoso</p>
   <nav class="footer-nav">
-      <ul class="footer-menu">
-          <li class="footer-item"><a href= "../pages/formulario.html" class="footer-link">Sobre Nós</a></li>
-          <li class="footer-item"><a href= "../pages/formulario.html" class="footer-link">Contato</a></li>
-          <li class="footer-item"><a href= "../pages/formulario.html" class="footer-link">Privacidade</a></li>
-          <button class="btn-feedback" onclick=" location.href='../pages/formulario.html'">Deixe seu
-              Feedback</button>
-      </ul>
-
+    <ul class="footer-menu">
+      <li class="footer-item"><a href="../pages/formulario.html" class="footer-link">Sobre Nós</a></li>
+      <li class="footer-item"><a href="../pages/formulario.html" class="footer-link">Contato</a></li>
+      <li class="footer-item"><a href="../pages/formulario.html" class="footer-link">Privacidade</a></li>
+      <li class="footer-item"><a href="forms.html" class="footer-link">Deixe seu Feedback</a></li>
+    </ul>
   </nav>
-  
 </footer>
 
 </html>
-
