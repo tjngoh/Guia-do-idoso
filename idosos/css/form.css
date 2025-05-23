@@ -1,0 +1,217 @@
+/* Reset básico */
+* {
+    box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Faz com que o body ocupe toda a altura da tela */
+}
+/* Header e Navegação */
+header {
+    background:  #d5ead8;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(125, 23, 23, 0.15);
+  border-bottom: 4px solid #9ccaa3;
+}
+header img {
+  height: 50px; /* Reduz um pouco a imagem se parecer muito grande */
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.btn {
+  font-size: 17px;
+  background: transparent;
+  border: none;
+  padding: 1em 1.0em;
+  color: #190636;
+  text-transform: uppercase;
+  position: relative;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #5A6650;
+  transition: 0.5s ease;
+}
+
+.btn:hover {
+  color: #040504;
+  transition-delay: 0.5s;
+}
+
+.btn:hover::before {
+  width: 100%;
+
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  background-color: #e7decf;
+  transition: 0.3s ease;
+  z-index: -1;
+}
+
+.btn:hover::after {
+  height: 100%;
+  transition-delay: 0.4s;
+  color: rgb(81, 118, 148);
+}
+a.btn {
+  text-decoration: none;
+  
+}
+
+nav {
+  margin-bottom: 16px; /* Dá espaço entre a barra de navegação e os cards */
+}
+
+header {
+  background:  #d5ead8;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(125, 23, 23, 0.15);
+  border-bottom: 4px solid #9ccaa3;
+}
+
+header h1 {
+  color: #5A6650;
+  font-family: 'Roboto Slab', serif;
+  margin: 0 0 0 40px; /* Zera o top/bottom e mantém a margem à esquerda */
+  font-size: 24px; /* Reduza se o texto estiver gigante */
+}
+
+header img {
+  height: 50px; /* Reduz um pouco a imagem se parecer muito grande */
+}
+
+h2 {
+  color: #5A6650;
+  margin: 10px;
+  font-size: 2.2em;
+}
+/* Conteúdo principal */
+main {
+    max-width: 600px;
+    margin: 2rem auto;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #284a45;
+}
+
+.feedback-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.feedback-form .error {
+    font-size: 0.9rem;
+    color: red;
+    margin-top: -0.8rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.feedback-form button {
+    background-color: #026d56;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.feedback-form button:hover {
+    background-color: #00aa8b;
+}
+
+/* Footer */
+footer {
+  color: rgb(255, 255, 255);
+  background-color: #A3C9A8;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  align-items: center;
+  top: 3%;
+}
+
+.footer-copy {
+  margin-bottom: 30px;
+  font-size: 30px;
+}
+
+.footer-nav .footer-menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-nav .footer-item {
+  display: inline;
+  margin-right: 15px;
+
+}
+
+.footer-nav .footer-link {
+  color: #F8F6F1;
+  text-decoration: none;
+  font-size: 20px;
+
+}
+
+.footer-nav .footer-link:hover {
+  text-decoration: None;
+  border-radius: 10px;
+  color: #5A6650;
+  transition: 200ms;
+}
+
